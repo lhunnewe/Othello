@@ -1,0 +1,11 @@
+Task 17 - 2/2
+As the first thing, create a copy of the file othello-16.py and rename it to othello-17.py. Then make the following changes in the new file:
+
+Add a new attribute zone_green as described on the previous page, and initialize it in the constructor with [[2, 0], [2, 2], [0, 2], [5, 0], [5, 2], [7, 2], [0, 5], [2, 5], [2, 7], [5, 7], [5, 5], [7, 5]]. Add a new attribute zone_side to represent the four central squares in the middle of each side (16 positions total). Initialize it in the constructor with [[2, 0], [3, 0], [4, 0], [5, 0], [0, 2], [0, 3], [0, 4], [0, 5], [2, 7], [3, 7], [4, 7], [5, 7], [7, 2], [7, 3], [7, 4], [7, 5]]. Also add a new attribute zone_center to represent the 4 x 4 central area of the board (16 positions total). Initialize it in the constructor using a pair of nested for loops. Note: Some of the zones overlap. This makes it easier to experiment with various strategies by combining the zones differently, leaving some of them out, etc.  
+
+Erase the body of strategy2() and copy the body of strategy1() there. Towards the end, before copying moves into legal_moves and calling strategy0(), try to place a disc into the 4 x 4 central part of the board (list zone_center). If that's not possible, try to put a disc into the green zone (list zone_green). If that’s not possible, try to put a disc into the central part of any side (list zone_side). In the main program, set Player 1 to beginner and Player 2 to 'advanced':
+
+R.set_player_strategy(1, 'beginner')
+R.set_player_strategy(2, 'advanced')
+R.set_player_strategy(1, 'beginner')
+R.set_player_strategy(2, 'advanced')
